@@ -1,6 +1,6 @@
 # v1.1.x
 containers:
-  nginx-example1:
+  nginx-backend-eg:
     scheduler: random
     availability: per-pool
     instances:
@@ -8,7 +8,7 @@ containers:
       max: 3
       default: 3
     config:
-      image: "stackhub/nginx-example1:latest"
+      image: "stackhub/nginx-backend-eg:latest"
       ports:
         - protocol: tcp
           container_port: "80"
