@@ -1,0 +1,17 @@
+# v1.1.x
+containers:
+  nginx-example1:
+    scheduler: random
+    availability: per-pool
+    instances:
+      min: 3
+      max: 3
+      default: 3
+    config:
+      image: "stackhub/nginx-example1:latest"
+      ports:
+        - protocol: tcp
+          container_port: "80"
+    host_config:
+      restart_policy: {}
+ 
